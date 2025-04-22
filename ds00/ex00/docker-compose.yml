@@ -8,7 +8,9 @@ services:
       POSTGRES_USER: aoropeza
       POSTGRES_DB: piscineds
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pg-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
 
 volumes:
-  pgdata:
+  pg-data:
